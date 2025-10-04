@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Periódico — Estética Halftone</title>
+
+    <!-- Fuentes Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Oswald:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <!-- SVG filter para semitono -->
+    <svg width="0" height="0" style="position: absolute">
+      <filter id="halftone">
+        <feColorMatrix
+          type="matrix"
+          values="0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0 0 0 1 0"
+          result="gray"
+        />
+        <feComponentTransfer result="poster">
+          <feFuncA type="table" tableValues="0 1" />
+        </feComponentTransfer>
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.8"
+          numOctaves="1"
+          stitchTiles="stitch"
+          result="noise"
+        />
+        <feDisplacementMap
+          in="gray"
+          in2="noise"
+          scale="6"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0 0 1" />
+          <feFuncG type="table" tableValues="0 0 1" />
+          <feFuncB type="table" tableValues="0 0 1" />
+        </feComponentTransfer>
+      </filter>
+    </svg>
+
+    <div class="paper">
+      <header class="masthead">
+        <div class="meta">Mayo, 2025 &nbsp;|&nbsp; Tiraje: 5,000</div>
+        <div class="title">EL MUNDO LATINO</div>
+        <div class="meta">Edición 01 &nbsp;|&nbsp; $5.000 COP</div>
+      </header>
+
+      <main>
+        <section class="lead">
+          <div>
+            <div class="hero">
+              <img
+                src="images/hero.jpg"
+                alt="Foto principal"
+                class="halftone"
+              />
+            </div>
+
+            <div class="headline">
+              <h1>YA ES MAÑANA</h1>
+              <p class="smallcaps">
+                No hay que vivir por la ventana — Una reflexión sobre el
+                presente.
+              </p>
+            </div>
+          </div>
+
+          <aside>
+            <h3>Opinión</h3>
+            <p>Texto de ejemplo para tu columna lateral.</p>
+            <div class="lista">
+              <strong>Lista de canciones</strong>
+              <ol>
+                <li>YA ES MAÑANA — 04:58</li>
+                <li>ECLIPSE SOLAR — 03:13</li>
+                <li>DOMINGO DE BAJÓN — 02:56</li>
+              </ol>
+            </div>
+          </aside>
+        </section>
+
+        <section class="sections">
+          <div class="section-title">World News</div>
+          <div class="cards">
+            <article class="card">
+              <div class="thumb"><img src="images/thumb1.jpg" alt="" /></div>
+              <h3>US Air Force: Why It's The Best</h3>
+              <p>Texto de ejemplo estilo periódico.</p>
+            </article>
+
+            <article class="card">
+              <div class="thumb"><img src="images/thumb2.jpg" alt="" /></div>
+              <h3>Story From Soldiers After World War</h3>
+              <p>Resumen corto de la nota.</p>
+            </article>
+
+            <article class="card">
+              <div class="thumb"><img src="images/thumb3.jpg" alt="" /></div>
+              <h3>Donald Trump is back?</h3>
+              <p>Pie rápido con datos y fecha.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Reproductor de música -->
+        <section class="music-player">
+          <h2>Escucha el álbum</h2>
+          <audio controls>
+            <source src="musica/morat-ya-es-manana.mp3" type="audio/mpeg" />
+            Tu navegador no soporta audio HTML5.
+          </audio>
+        </section>
+      </main>
+
+      <footer class="footer">
+        Diseño: Taller de Tipografía — Impreso en prensa de punto semi-tinta.
+      </footer>
+    </div>
+  </body>
+</html>
