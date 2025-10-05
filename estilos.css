@@ -308,3 +308,36 @@ aside p {
   width: 100%;
   gap: 12px;
 }
+.masthead {
+  border-bottom: 8px solid #000;
+  padding: 8px 0;
+}
+
+.masthead-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* espacio entre título e imágenes */
+}
+
+.masthead-img {
+  height: 40px; /* ajusta según quieras */
+  width: auto;
+}
+
+.masthead .title {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 56px;
+  text-align: center;
+}
+
+.masthead-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 12px;
+  margin-top: 6px;
+  text-transform: uppercase;
+}
