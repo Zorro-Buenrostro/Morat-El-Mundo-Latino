@@ -199,26 +199,55 @@
               Disfruta los sencillos de YEM directamente desde nuestro
               periódico:
             </p>
-            <audio controls>
-              <source src="musica/ya-es-manana.mp3" type="audio/mpeg" />
-              Tu navegador no soporta audio HTML5.
-            </audio>
-            <ul>
-              <source src="Ya Es Mañana.mp3" type="audio/mpeg" />
-              <source src="Eclipse Solar.mp3" type="audio/mpeg" />
-              <source src="Domingo De Bajón.mp3" type="audio/mpeg" />
-              <source src="Sin Ti.mp3" type="audio/mpeg" />
-              <source src="Por Si No Te Vuelvo A Ver.mp3" type="audio/mpeg" />
-              <source src="Cuarto De Hotel.mp3" type="audio/mpeg" />
-            </ul>
+            <div class="music-box">
+              <h2>Escucha el álbum</h2>
+              <p>
+                Disfruta los sencillos de YEM directamente desde nuestro
+                periódico:
+              </p>
+
+              <audio controls>
+                <source src="musica/ya-es-manana.mp3" type="audio/mpeg" />
+                Tu navegador no soporta audio HTML5.
+              </audio>
+
+              <ul>
+                <li data-src="musica/ya-es-manana.mp3">YA ES MAÑANA — 04:58</li>
+                <li data-src="musica/eclipse-solar.mp3">
+                  ECLIPSE SOLAR — 03:13
+                </li>
+                <li data-src="musica/domingo-de-bajon.mp3">
+                  DOMINGO DE BAJÓN — 02:56
+                </li>
+                <li data-src="musica/sin-ti.mp3">
+                  SIN TI FT JAY WHEELER — 02:39
+                </li>
+                <li data-src="musica/por-si-no-te-vuelvo-a-ver.mp3">
+                  POR SI NO TE VUELVO A VER — 03:05
+                </li>
+                <li data-src="musica/cuarto-de-hotel.mp3">
+                  CUARTO DE HOTEL — 02:57
+                </li>
+              </ul>
+            </div>
+
+            <script>
+              const player = document.querySelector(".music-player audio");
+              const trackList = document.querySelectorAll(
+                ".music-player ul li"
+              );
+
+              trackList.forEach((track) => {
+                track.addEventListener("click", () => {
+                  const src = track.getAttribute("data-src");
+                  player.src = src;
+                  player.play();
+                });
+              });
+            </script>
           </div>
         </section>
       </main>
-
-      <footer class="footer">GRACIAS-LE ESPERAMOS MAÑANA</footer>
     </div>
-
-    <!-- SCRIPT PARA LISTA INTERACTIVA -->
-    <script>
-      const player = document.querySelector(".music-player audio");
-     
+  </body>
+</html>
