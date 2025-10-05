@@ -332,11 +332,11 @@ aside p {
   white-space: nowrap;
   font-size: 56px;
 }
-/* Fila horizontal de texto debajo del título */
+
 .masthead-info {
   display: flex;
   justify-content: center;
-  gap: 40px; /* espacio entre cada texto */
+  gap: 40px;
   margin-top: 4px;
   font-size: 14px;
   text-transform: uppercase;
@@ -346,13 +346,13 @@ aside p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px; /* espacio entre título e imágenes */
+  gap: 12px;
 }
 
 .masthead-info {
   display: flex;
   justify-content: center;
-  gap: 40px; /* espacio entre cada texto */
+  gap: 40px;
   margin-top: 4px;
   font-size: 14px;
   text-transform: uppercase;
@@ -360,6 +360,36 @@ aside p {
 }
 
 .masthead-img {
-  height: 40px; /* apenas más grande que el texto */
+  height: 40px;
   width: auto;
+}
+.masthead-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.masthead-img {
+  height: 50px;
+  width: auto;
+}
+
+.masthead .title {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 56px;
+  text-align: center;
+}
+
+.masthead-info {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  flex-wrap: wrap;
 }
