@@ -137,19 +137,70 @@ aside p {
   margin: 6px 0 0;
 }
 
+/* ========================
+   SECCIÓN DE MÚSICA ESTÉTICA
+======================== */
 .music-player {
   margin-top: 24px;
   border-top: 6px solid #000;
   padding-top: 10px;
 }
-.music-player h2 {
+
+.music-player .music-box {
+  border: 6px solid #000;
+  padding: 16px 20px;
+  background: #fff;
+  margin-top: 24px;
+  box-shadow: 2px 2px 0px #000; /* pequeño efecto de recuadro para destacar */
+}
+
+.music-player .music-box h2 {
   font-family: "Playfair Display", serif;
   font-size: 28px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
 }
-.music-player audio {
+
+.music-player .music-box p {
+  font-size: 12px;
+  margin: 6px 0 12px;
+}
+
+.music-player .music-box audio {
   width: 100%;
-  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 2px solid #000; /* borde del reproductor */
+  background: #f0f0f0; /* fondo suave para el reproductor */
+  padding: 4px;
 }
+
+.music-player .music-box ul {
+  font-size: 12px;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.music-player .music-box ul li {
+  margin-bottom: 4px;
+}
+
+/* Destacar la primera canción */
+.music-player .music-box ul li:first-child {
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  padding-left: 18px;
+}
+
+.music-player .music-box ul li:first-child::before {
+  content: "🎵";
+  position: absolute;
+  left: 0;
+}
+
+/* ========================
+   FOOTER
+======================== */
 .footer {
   margin-top: 20px;
   border-top: 6px solid #000;
