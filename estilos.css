@@ -299,3 +299,28 @@ aside p {
 .masthead {
   gap: 6px;
 }
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-bottom: 8px solid #000;
+  padding: 8px 0;
+  position: relative;
+}
+
+.masthead-img {
+  height: 36px; /* un poco más grande que el texto */
+  width: auto;
+}
+
+.masthead-info {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px 0 12px 0;
+  border-bottom: 6px solid #000;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  gap: 20px;
+}
