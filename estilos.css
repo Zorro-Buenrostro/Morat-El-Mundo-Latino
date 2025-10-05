@@ -16,15 +16,21 @@ body {
 }
 .masthead {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 8px solid #000;
+  padding: 8px 0;
+  gap: 6px;
+}
+.masthead-top {
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px; /* espacio entre título e imágenes */
-  border-bottom: 8px solid #000;
-  padding: 8px 0;
-  position: relative;
+  width: 100%;
 }
 .masthead-img {
-  height: 60px; /* Ajusta la altura según necesites */
+  height: 40px; /* Ajusta según tamaño deseado */
   width: auto;
 }
 .masthead .title {
@@ -33,25 +39,16 @@ body {
   letter-spacing: 2px;
   font-size: 56px;
   text-align: center;
+  white-space: nowrap; /* evitar que el texto se rompa */
 }
-
-/* Nueva fila de frases debajo de la línea */
 .meta-row {
-  position: absolute;
-  bottom: -28px; /* Debajo de la línea */
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  gap: 15px; /* espacio entre los elementos */
-  font-size: 12px; /* tamaño legible */
-  text-transform: uppercase;
-  white-space: nowrap; /* no permite salto de línea */
-}
-
-/* Resto del CSS existente */
-.masthead .meta {
+  justify-content: center;
+  gap: 20px; /* espacio entre frases */
   font-size: 12px;
   text-transform: uppercase;
+  margin-top: 4px;
+  flex-wrap: nowrap;
 }
 .lead {
   display: grid;
