@@ -299,3 +299,12 @@ aside p {
   width: 100%;
   gap: 12px;
 }
+.masthead-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px; /* espacio debajo de la línea */
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 100%;
+  gap: 12px;
+}
