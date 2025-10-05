@@ -14,6 +14,8 @@ body {
   padding: 18px;
   border: 6px solid #000;
 }
+
+/* Masthead */
 .masthead {
   display: flex;
   flex-direction: column;
@@ -21,20 +23,18 @@ body {
   border-bottom: 8px solid #000;
   padding: 8px 0;
   position: relative;
-  gap: 8px;
 }
 
-/* Nueva estructura para el header */
 .masthead-top {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 12px; /* espacio entre título e imágenes */
   width: 100%;
 }
 
 .masthead-img {
-  height: 40px; /* Ajusta según quieras */
+  height: 60px; /* Ajusta según necesites */
   width: auto;
 }
 
@@ -46,16 +46,24 @@ body {
   text-align: center;
 }
 
-/* Fila de texto debajo de la línea */
 .masthead-info {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 24px; /* espacio entre los textos */
   font-size: 12px;
   text-transform: uppercase;
-  margin-top: 4px;
+  margin-top: 6px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
+.masthead .meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+/* Lead section */
 .lead {
   display: grid;
   grid-template-columns: 1fr 320px;
@@ -110,6 +118,8 @@ aside p {
   padding-top: 8px;
   font-size: 12px;
 }
+
+/* Section Titles */
 .section-title {
   font-family: "Playfair Display", serif;
   font-size: 42px;
@@ -119,50 +129,48 @@ aside p {
   text-transform: uppercase;
 }
 
+/* Cards */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 12px;
+  align-items: stretch;
 }
-
 .card {
   border: 4px solid #000;
   padding: 8px;
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 .card .thumb {
-  height: 120px;
-  overflow: hidden;
-  border-bottom: 4px solid #000;
-  margin-bottom: 8px;
+  height: auto !important;
+  overflow: visible !important;
 }
-
 .card img {
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
   display: block;
-  object-fit: contain;
   filter: grayscale(1);
 }
-
 .card h3 {
   font-size: 16px;
   margin: 6px 0 0;
   font-weight: 700;
 }
-
 .card p {
   font-size: 12px;
   margin: 6px 0 0;
 }
 
+/* Music player */
 .music-player {
   margin-top: 24px;
   border-top: 6px solid #000;
   padding-top: 10px;
 }
-
 .music-player .music-box {
   border: 6px solid #000;
   padding: 16px 20px;
@@ -170,19 +178,16 @@ aside p {
   margin-top: 24px;
   box-shadow: 2px 2px 0px #000;
 }
-
 .music-player .music-box h2 {
   font-family: "Playfair Display", serif;
   font-size: 28px;
   margin-bottom: 8px;
   text-transform: uppercase;
 }
-
 .music-player .music-box p {
   font-size: 12px;
   margin: 6px 0 12px;
 }
-
 .music-player .music-box audio {
   width: 100%;
   margin-bottom: 12px;
@@ -191,37 +196,33 @@ aside p {
   padding: 4px;
   border-radius: 2px;
 }
-
 .music-player .music-box ul {
   font-size: 12px;
   padding-left: 20px;
   margin: 0;
 }
-
 .music-player .music-box ul li {
   margin-bottom: 6px;
   cursor: pointer;
   transition: color 0.2s, font-weight 0.2s;
 }
-
 .music-player .music-box ul li:hover {
   color: #d6336c;
   font-weight: 700;
 }
-
 .music-player .music-box ul li:first-child {
   font-weight: 700;
   color: #000;
   position: relative;
   padding-left: 18px;
 }
-
 .music-player .music-box ul li:first-child::before {
   content: "🎵";
   position: absolute;
   left: 0;
 }
 
+/* Footer */
 .footer {
   margin-top: 20px;
   border-top: 6px solid #000;
@@ -230,6 +231,45 @@ aside p {
   text-align: center;
 }
 
+/* Foto frase */
+.foto-frase {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 24px;
+  border: 6px solid #000;
+  padding: 12px;
+  background: #fff;
+}
+.foto-frase img {
+  width: 50%;
+  height: auto;
+  display: block;
+  border: 4px solid #000;
+}
+.foto-frase .texto {
+  width: 50%;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .foto-frase {
+    flex-direction: column;
+  }
+  .foto-frase img,
+  .foto-frase .texto {
+    width: 100%;
+  }
+  .foto-frase .texto {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+/* Responsive adjustments */
 @media (max-width: 880px) {
   .lead {
     grid-template-columns: 1fr;
@@ -244,7 +284,6 @@ aside p {
     font-size: 40px;
   }
 }
-
 @media (max-width: 480px) {
   .cards {
     grid-template-columns: 1fr;
@@ -255,65 +294,8 @@ aside p {
     gap: 8px;
   }
 }
-.card .thumb {
-  height: auto !important;
-  overflow: visible !important;
-}
 
-.card img {
-  width: 100% !important;
-  height: auto !important;
-  object-fit: contain !important;
-  display: block;
-}
-
-.cards {
-  align-items: stretch;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.foto-frase {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-top: 24px;
-  border: 6px solid #000;
-  padding: 12px;
-  background: #fff;
-}
-
-.foto-frase img {
-  width: 50%;
-  height: auto;
-  display: block;
-  border: 4px solid #000;
-}
-
-.foto-frase .texto {
-  width: 50%;
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-  .foto-frase {
-    flex-direction: column;
-  }
-
-  .foto-frase img,
-  .foto-frase .texto {
-    width: 100%;
-  }
-
-  .foto-frase .texto {
-    font-size: 28px;
-    text-align: center;
-  }
+/* Ajustes masthead final para imágenes y fila */
+.masthead {
+  gap: 6px;
 }
