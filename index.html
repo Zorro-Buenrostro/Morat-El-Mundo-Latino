@@ -1,86 +1,207 @@
-<section class="sections">
-  <div class="section-title">EL PERIÓDICO DE COLOMBIA</div>
-  <div class="cards">
-    <article class="card">
-      <div class="thumb"><img src="faltas tu.jpg" alt="Faltas Tú" /></div>
-      <h3>Faltas tú</h3>
-      <p>
-        PORTADA DE ¨FALTAS TÚ¨, LA PRIMERA CANCIÓN OFICIAL DE YEM QUE VIO LA LUZ
-        EN ABRIL DE 2024
-      </p>
-    </article>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>El Mundo Latino</title>
 
-    <article class="card">
-      <div class="thumb">
-        <img src="psntvav.jpg" alt="Por si no te vuelvo a ver" />
-      </div>
-      <h3>POR SI NO TE VUELVO A VER</h3>
-      <p>
-        PORTADA DE ¨POR SI NO TE VUELVO A VER¨, EL SEGUNDO SINGLE DE YEM, QUE
-        FUE LANZADO EN SEPTIEMBRE DE 2024
-      </p>
-    </article>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Oswald:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <article class="card">
-      <div class="thumb"><img src="policia.jpg" alt="La Policía" /></div>
-      <h3>LA POLICIA</h3>
-      <p>
-        PORTADA Y FOTOGRAMAS DEL VIDEOCLIP DEL SINGLE ¨LA POLICIA¨, GRABADO EN
-        MÉXICO EN MAYO DE 2024
-      </p>
-    </article>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute">
+      <filter id="halftone">
+        <feColorMatrix
+          type="matrix"
+          values="0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0 0 0 1 0"
+          result="gray"
+        />
+        <feComponentTransfer result="poster">
+          <feFuncA type="table" tableValues="0 1" />
+        </feComponentTransfer>
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.8"
+          numOctaves="1"
+          stitchTiles="stitch"
+          result="noise"
+        />
+        <feDisplacementMap
+          in="gray"
+          in2="noise"
+          scale="6"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0 0 1" />
+          <feFuncG type="table" tableValues="0 0 1" />
+          <feFuncB type="table" tableValues="0 0 1" />
+        </feComponentTransfer>
+      </filter>
+    </svg>
 
-    <!-- Noticias nuevas -->
-    <article class="card">
-      <div class="thumb"><img src="toca.jpg" alt="Me Toca A Mí" /></div>
-      <h3>ME TOCA A MÍ</h3>
-      <p>
-        PORTADA DE ¨ME TOCA A MÍ¨, EL CUARTO SINGLE DE YEM, LA COLABORACIÓN DEL
-        GRUPO JUNTO AL ARTISTA CAMILO.
-      </p>
-    </article>
+    <div class="paper">
+      <header class="masthead">
+        <div class="meta">Octubre, 2025 &nbsp;|&nbsp; Tiraje: 5,000</div>
+        <div class="title">EL MUNDO LATINO</div>
+        <div class="meta">Edición 01 &nbsp;|&nbsp; $5.000 COP</div>
+      </header>
 
-    <article class="card">
-      <div class="thumb"><img src="posando.jpg" alt="Photoshoot" /></div>
-      <h3>PHOTOSHOOT</h3>
-      <p>
-        LOS CHICOS DE LA BANDA POSAN PARA LA SESIÓN DE FOTOS PROMOCIONALES DE
-        YEM (YA ES MAÑANA).
-      </p>
-    </article>
+      <main>
+        <section class="lead">
+          <div>
+            <div class="hero">
+              <img src="portada.jpg" alt="Foto principal" class="halftone" />
+            </div>
 
-    <article class="card">
-      <div class="thumb"><img src="misterio.jpg" alt="YEM" /></div>
-      <h3>YEM</h3>
-      <p>
-        REPRESENTA UN NUEVO AMANECER PARA LA BANDA. MORAT LANZA SU QUINTO DISCO
-        ¨YEM¨ TOTALMENTE POP-ROCK.
-      </p>
-    </article>
+            <div class="headline">
+              <h1>YA ES MAÑANA</h1>
+              <p class="smallcaps">No hay que vivir por la ventana</p>
+            </div>
+          </div>
 
-    <article class="card">
-      <div class="thumb"><img src="ojom.jpg" alt="No sé qué me pasa" /></div>
-      <h3>NO SÉ QUÉ ME PASA</h3>
-      <p>
-        OTRA VEZ FRENTE A TU CASA. COMO UN PERRO, SIEMPRE VUELVO A TI. Y TÚ, QUE
-        ERES ESA DROGA QUE INTENTÉ DEJAR MIL VECES.
-      </p>
-    </article>
+          <aside>
+            <h3>YEM PARTE 1</h3>
+            <p>YEM REPRESENTA UN NUEVO AMANCECER PARA LA BANDA</p>
+            <div class="lista">
+              <strong>Lista de canciones</strong>
+              <ol>
+                <li>YA ES MAÑANA — 04:58</li>
+                <li>ECLIPSE SOLAR — 03:13</li>
+                <li>DOMINGO DE BAJÓN — 02:56</li>
+                <li>SIN TI FT JAY WHEELER — 02:39</li>
+                <li>POR SI NO TE VUELVO A VER — 03:05</li>
+                <li>CUARTO DE HOTEL — 02:57</li>
+                <li>VUELVO A TI — 03:06</li>
+                <li>ME TOCA A MÍ CON CAMILO — 03:00</li>
+                <li>DESASTRE NATURAL — 03:00</li>
+                <li>LA POLICÍA — 02:37</li>
+                <li>FALTAS TÚ — 03:21</li>
+                <li>DOS MIL ALGO — 03:43</li>
+                <li>MTV — 03:11</li>
+                <li>ANTES DE LOS 30 — 03:39</li>
+              </ol>
+            </div>
+          </aside>
+        </section>
 
-    <article class="card">
-      <div class="thumb"><img src="morat riendo.jpg" alt="Ya Es Mañana" /></div>
-      <h3>YA ES MAÑANA</h3>
-      <p>A VECES LA ALARMA DEL DESPERTADOR NO SUENA COMO ALARMA.</p>
-    </article>
+        <section class="sections">
+          <div class="section-title">EL PERIÓDICO DE COLOMBIA</div>
+          <div class="cards">
+            <!-- Noticias originales -->
+            <article class="card">
+              <div class="thumb">
+                <img src="faltas tu.jpg" alt="Faltas Tú" />
+              </div>
+              <h3>Faltas tú</h3>
+              <p>
+                PORTADA DE ¨FALTAS TÚ¨, LA PRIMERA CANCIÓN OFICIAL DE YEM QUE
+                VIO LA LUZ EN ABRIL DE 2024
+              </p>
+            </article>
 
-    <article class="card">
-      <div class="thumb">
-        <img src="desayuno largo.jpg" alt="Desastre Natural" />
-      </div>
-      <h3>DESASTRE NATURAL</h3>
-      <p>
-        TODO FUERA DE CONTROL, PERO CRÉEME QUE AL FINAL SIEMPRE SALE EL SOL.
-      </p>
-    </article>
-  </div>
-</section>
+            <article class="card">
+              <div class="thumb">
+                <img src="psntvav.jpg" alt="Por si no te vuelvo a ver" />
+              </div>
+              <h3>POR SI NO TE VUELVO A VER</h3>
+              <p>
+                PORTADA DE ¨POR SI NO TE VUELVO A VER¨, EL SEGUNDO SINGLE DE
+                YEM, QUE FUE LANZADO EN SEPTIEMBRE DE 2024
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb">
+                <img src="policia.jpg" alt="La Policía" />
+              </div>
+              <h3>LA POLICIA</h3>
+              <p>
+                PORTADA Y FOTOGRAMAS DEL VIDEOCLIP DEL SINGLE ¨LA POLICIA¨,
+                GRABADO EN MÉXICO EN MAYO DE 2024
+              </p>
+            </article>
+
+            <!-- Noticias nuevas -->
+            <article class="card">
+              <div class="thumb"><img src="toca.jpg" alt="Me Toca A Mí" /></div>
+              <h3>ME TOCA A MÍ</h3>
+              <p>
+                PORTADA DE ¨ME TOCA A MÍ¨, EL CUARTO SINGLE DE YEM, LA
+                COLABORACIÓN DEL GRUPO JUNTO AL ARTISTA CAMILO.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb">
+                <img src="posando.jpg" alt="Photoshoot" />
+              </div>
+              <h3>PHOTOSHOOT</h3>
+              <p>
+                LOS CHICOS DE LA BANDA POSAN PARA LA SESIÓN DE FOTOS
+                PROMOCIONALES DE YEM (YA ES MAÑANA).
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb"><img src="misterio.jpg" alt="YEM" /></div>
+              <h3>YEM</h3>
+              <p>
+                REPRESENTA UN NUEVO AMANECER PARA LA BANDA. MORAT LANZA SU
+                QUINTO DISCO ¨YEM¨ TOTALMENTE POP-ROCK.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb">
+                <img src="ojom.jpg" alt="No sé qué me pasa" />
+              </div>
+              <h3>NO SÉ QUÉ ME PASA</h3>
+              <p>
+                OTRA VEZ FRENTE A TU CASA. COMO UN PERRO, SIEMPRE VUELVO A TI. Y
+                TÚ, QUE ERES ESA DROGA QUE INTENTÉ DEJAR MIL VECES.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb">
+                <img src="morat-riendo.jpg" alt="Ya Es Mañana" />
+              </div>
+              <h3>YA ES MAÑANA</h3>
+              <p>A VECES LA ALARMA DEL DESPERTADOR NO SUENA COMO ALARMA.</p>
+            </article>
+
+            <article class="card">
+              <div class="thumb">
+                <img src="desayuno-largo.jpg" alt="Desastre Natural" />
+              </div>
+              <h3>DESASTRE NATURAL</h3>
+              <p>
+                TODO FUERA DE CONTROL, PERO CRÉEME QUE AL FINAL SIEMPRE SALE EL
+                SOL.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="music-player">
+          <h2>Escucha el álbum</h2>
+          <audio controls>
+            <source src="musica/morat-ya-es-manana.mp3" type="audio/mpeg" />
+            Tu navegador no soporta audio HTML5.
+          </audio>
+        </section>
+      </main>
+
+      <footer class="footer">GRACIAS-LE ESPERAMOS MAÑANA</footer>
+    </div>
+  </body>
+</html>
