@@ -50,11 +50,17 @@
 
     <div class="paper">
       <header class="masthead">
-        <img src="img-izquierda.png" alt="Izquierda" class="side-img left" />
-        <div class="title-container">
+        <div class="masthead-container">
+          <img src="izquierda.png" alt="Izquierda" class="masthead-img" />
           <div class="title">EL MUNDO LATINO</div>
+          <img src="derecha.png" alt="Derecha" class="masthead-img" />
         </div>
-        <img src="img-derecha.png" alt="Derecha" class="side-img right" />
+        <div class="masthead-info">
+          <span>ISA, SIMÓN, MARTÍN Y VILLA</span>
+          <span>OCTUBRE 2025</span>
+          <span>5,000 COP</span>
+          <span>NUEVO AMANECER 900,000</span>
+        </div>
       </header>
 
       <main>
@@ -91,23 +97,23 @@
                 <li>MTV — 03:11</li>
                 <li>ANTES DE LOS 30 — 03:39</li>
               </ol>
+            </div>
 
-              <div class="card" style="margin-top: 16px">
-                <div class="thumb" style="height: 200px; overflow: hidden">
-                  <img
-                    src="nomi.png"
-                    alt="Morat Latin Grammys"
-                    style="width: 100%; height: 100%; object-fit: cover"
-                  />
-                </div>
-                <h3>Morat nominados a los Latin Grammys 2025</h3>
-                <p>
-                  La banda colombiana Morat recibe una nominación en los Latin
-                  Grammys 2025 en la categoría "Mejor Álbum Pop/Rock" por su
-                  reciente trabajo ¨YEM¨. Este reconocimiento celebra su
-                  trayectoria y popularidad en la música latina.
-                </p>
+            <div class="card" style="margin-top: 16px">
+              <div class="thumb" style="height: 200px; overflow: hidden">
+                <img
+                  src="nomi.png"
+                  alt="Morat Latin Grammys"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
               </div>
+              <h3>Morat nominados a los Latin Grammys 2025</h3>
+              <p>
+                La banda colombiana Morat recibe una nominación en los Latin
+                Grammys 2025 en la categoría "Mejor Álbum Pop/Rock" por su
+                reciente trabajo ¨YEM¨. Este reconocimiento celebra su
+                trayectoria y popularidad en la música latina.
+              </p>
             </div>
           </aside>
         </section>
@@ -125,7 +131,87 @@
                 VIO LA LUZ EN ABRIL DE 2024
               </p>
             </article>
-            <!-- resto de cards igual -->
+
+            <article class="card">
+              <div class="thumb">
+                <img src="psntvav.jpg" alt="Por si no te vuelvo a ver" />
+              </div>
+              <h3>POR SI NO TE VUELVO A VER</h3>
+              <p>
+                PORTADA DE ¨POR SI NO TE VUELVO A VER¨, EL SEGUNDO SINGLE DE
+                YEM, QUE FUE LANZADO EN SEPTIEMBRE DE 2024
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb">
+                <img src="policia.jpg" alt="La Policía" />
+              </div>
+              <h3>LA POLICIA</h3>
+              <p>
+                PORTADA Y FOTOGRAMAS DEL VIDEOCLIP DEL SINGLE ¨LA POLICIA¨,
+                GRABADO EN MÉXICO EN MAYO DE 2024
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb"><img src="toca.jpg" alt="Me Toca A Mí" /></div>
+              <h3>ME TOCA A MÍ</h3>
+              <p>
+                PORTADA DE ¨ME TOCA A MÍ¨, EL CUARTO SINGLE DE YEM, LA
+                COLABORACIÓN DEL GRUPO JUNTO AL ARTISTA CAMILO.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb">
+                <img src="posando.jpg" alt="Photoshoot" />
+              </div>
+              <h3>PHOTOSHOOT</h3>
+              <p>
+                LOS CHICOS DE LA BANDA POSAN PARA LA SESIÓN DE FOTOS
+                PROMOCIONALES DE YEM (YA ES MAÑANA).
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb"><img src="misterio.jpg" alt="YEM" /></div>
+              <h3>YEM</h3>
+              <p>
+                REPRESENTA UN NUEVO AMANECER PARA LA BANDA. MORAT LANZA SU
+                QUINTO DISCO ¨YEM¨ TOTALMENTE POP-ROCK.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb">
+                <img src="ojom.jpg" alt="No sé qué me pasa" />
+              </div>
+              <h3>NO SÉ QUÉ ME PASA</h3>
+              <p>
+                OTRA VEZ FRENTE A TU CASA. COMO UN PERRO, SIEMPRE VUELVO A TI. Y
+                TÚ, QUE ERES ESA DROGA QUE INTENTÉ DEJAR MIL VECES.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="thumb">
+                <img src="morat riendo.jpg" alt="Ya Es Mañana" />
+              </div>
+              <h3>YA ES MAÑANA</h3>
+              <p>A VECES LA ALARMA DEL DESPERTADOR NO SUENA COMO ALARMA.</p>
+            </article>
+
+            <article class="card">
+              <div class="thumb">
+                <img src="desayuno largo.jpg" alt="Desastre Natural" />
+              </div>
+              <h3>DESASTRE NATURAL</h3>
+              <p>
+                TODO FUERA DE CONTROL, PERO CRÉEME QUE AL FINAL SIEMPRE SALE EL
+                SOL.
+              </p>
+            </article>
           </div>
         </section>
 
@@ -187,35 +273,5 @@
         </script>
       </main>
     </div>
-
-    <style>
-      .masthead {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 8px solid #000;
-        padding: 8px 0;
-        position: relative;
-      }
-
-      .title-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .masthead .title {
-        font-family: "Playfair Display", serif;
-        font-weight: 900;
-        letter-spacing: 2px;
-        font-size: 56px;
-        white-space: nowrap;
-      }
-
-      .side-img {
-        max-height: 60px; /* más pequeño que el título */
-        margin: 0 12px;
-      }
-    </style>
   </body>
 </html>

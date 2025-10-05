@@ -332,3 +332,13 @@ aside p {
   white-space: nowrap;
   font-size: 56px;
 }
+/* Fila horizontal de texto debajo del título */
+.masthead-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* espacio entre cada texto */
+  margin-top: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
