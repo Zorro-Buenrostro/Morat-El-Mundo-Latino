@@ -99,10 +99,7 @@ aside p {
 ======================== */
 .cards {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* permite más noticias y mantiene diseño */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 12px;
 }
 
@@ -113,7 +110,7 @@ aside p {
 }
 
 .card .thumb {
-  height: 120px; /* mantiene tu diseño original */
+  height: 120px;
   overflow: hidden;
   border-bottom: 4px solid #000;
   margin-bottom: 8px;
@@ -121,8 +118,8 @@ aside p {
 
 .card img {
   width: 100%;
-  height: 100%; /* mantiene la proporción dentro de la caja */
-  object-fit: cover; /* mantiene el recorte uniforme original */
+  height: 100%;
+  object-fit: cover;
   filter: grayscale(1);
 }
 
@@ -151,7 +148,7 @@ aside p {
   padding: 16px 20px;
   background: #fff;
   margin-top: 24px;
-  box-shadow: 2px 2px 0px #000; /* pequeño efecto de recuadro para destacar */
+  box-shadow: 2px 2px 0px #000;
 }
 
 .music-player .music-box h2 {
@@ -169,9 +166,10 @@ aside p {
 .music-player .music-box audio {
   width: 100%;
   margin-bottom: 12px;
-  border: 2px solid #000; /* borde del reproductor */
-  background: #f0f0f0; /* fondo suave para el reproductor */
+  border: 2px solid #000;
+  background: #f0f0f0;
   padding: 4px;
+  border-radius: 2px;
 }
 
 .music-player .music-box ul {
@@ -181,10 +179,16 @@ aside p {
 }
 
 .music-player .music-box ul li {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: color 0.2s, font-weight 0.2s;
 }
 
-/* Destacar la primera canción */
+.music-player .music-box ul li:hover {
+  color: #d6336c;
+  font-weight: 700;
+}
+
 .music-player .music-box ul li:first-child {
   font-weight: 700;
   color: #000;

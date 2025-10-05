@@ -191,7 +191,7 @@
           </div>
         </section>
 
-        <!-- NUEVA SECCIÓN DE MÚSICA -->
+        <!-- NUEVA SECCIÓN DE MÚSICA FUNCIONAL -->
         <section class="music-player">
           <div class="music-box">
             <h2>Escucha el álbum</h2>
@@ -200,15 +200,15 @@
               periódico:
             </p>
             <audio controls>
-              <source src="musica/morat-ya-es-manana.mp3" type="audio/mpeg" />
+              <source src="musica/ya-es-manana.mp3" type="audio/mpeg" />
               Tu navegador no soporta audio HTML5.
             </audio>
             <ul>
-              <li>YA ES MAÑANA — 04:58</li>
-              <li>ECLIPSE SOLAR — 03:13</li>
-              <li>DOMINGO DE BAJÓN — 02:56</li>
-              <li>SIN TI FT JAY WHEELER — 02:39</li>
-              <li>POR SI NO TE VUELVO A VER — 03:05</li>
+              <li data-src="musica/ya-es-manana.mp3">YA ES MAÑANA — 04:58</li>
+              <li data-src="musica/eclipse-solar.mp3">ECLIPSE SOLAR — 03:13</li>
+              <li data-src="musica/domingo-de-bajon.mp3">DOMINGO DE BAJÓN — 02:56</li>
+              <li data-src="musica/sin-ti.mp3">SIN TI FT JAY WHEELER — 02:39</li>
+              <li data-src="musica/por-si-no-te-vuelvo-a-ver.mp3">POR SI NO TE VUELVO A VER — 03:05</li>
             </ul>
           </div>
         </section>
@@ -216,5 +216,8 @@
 
       <footer class="footer">GRACIAS-LE ESPERAMOS MAÑANA</footer>
     </div>
-  </body>
-</html>
+
+    <!-- SCRIPT PARA LISTA INTERACTIVA -->
+    <script>
+      const player = document.querySelector(".music-player audio");
+     
