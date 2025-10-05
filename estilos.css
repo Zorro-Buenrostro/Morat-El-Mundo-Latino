@@ -292,3 +292,25 @@ aside p {
     text-align: center;
   }
 }
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* espacio entre título e imágenes */
+  border-bottom: 8px solid #000;
+  padding: 8px 0;
+  position: relative;
+}
+
+.masthead-img {
+  height: 60px; /* Ajusta la altura según necesites */
+  width: auto;
+}
+
+.masthead .title {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 56px;
+  text-align: center;
+}
