@@ -342,3 +342,24 @@ aside p {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.masthead-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* espacio entre título e imágenes */
+}
+
+.masthead-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* espacio entre cada texto */
+  margin-top: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.masthead-img {
+  height: 40px; /* apenas más grande que el texto */
+  width: auto;
+}
