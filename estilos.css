@@ -241,3 +241,13 @@ aside p {
   object-fit: contain !important;
   display: block;
 }
+/* === Igualar altura de todas las tarjetas === */
+.cards {
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
