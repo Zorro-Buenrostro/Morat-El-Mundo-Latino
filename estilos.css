@@ -296,14 +296,14 @@ aside p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px; /* espacio entre título e imágenes */
+  gap: 12px;
   border-bottom: 8px solid #000;
   padding: 8px 0;
   position: relative;
 }
 
 .masthead-img {
-  height: 60px; /* Ajusta la altura según necesites */
+  height: 60px;
   width: auto;
 }
 
@@ -313,4 +313,22 @@ aside p {
   letter-spacing: 2px;
   font-size: 56px;
   text-align: center;
+}
+
+.masthead-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.masthead-container img {
+  height: 64px;
+  width: auto;
+}
+
+.masthead-container .title {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 56px;
 }
