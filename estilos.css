@@ -16,16 +16,42 @@ body {
 }
 .masthead {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   border-bottom: 8px solid #000;
   padding: 8px 0;
+  gap: 8px;
+}
+.masthead-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.masthead-img {
+  height: 40px; /* Ajusta según el tamaño que quieras */
+  width: auto;
+  object-fit: contain;
 }
 .masthead .title {
   font-family: "Playfair Display", serif;
   font-weight: 900;
   letter-spacing: 2px;
   font-size: 56px;
+  text-align: center;
+  white-space: nowrap;
+}
+.masthead-info {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+.masthead-info span {
+  font-weight: 700;
 }
 .masthead .meta {
   font-size: 12px;
@@ -93,26 +119,22 @@ aside p {
   margin-bottom: 12px;
   text-transform: uppercase;
 }
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 12px;
 }
-
 .card {
   border: 4px solid #000;
   padding: 8px;
   background: #fff;
 }
-
 .card .thumb {
   height: 120px;
   overflow: hidden;
   border-bottom: 4px solid #000;
   margin-bottom: 8px;
 }
-
 .card img {
   width: 100%;
   height: auto;
@@ -120,24 +142,20 @@ aside p {
   object-fit: contain;
   filter: grayscale(1);
 }
-
 .card h3 {
   font-size: 16px;
   margin: 6px 0 0;
   font-weight: 700;
 }
-
 .card p {
   font-size: 12px;
   margin: 6px 0 0;
 }
-
 .music-player {
   margin-top: 24px;
   border-top: 6px solid #000;
   padding-top: 10px;
 }
-
 .music-player .music-box {
   border: 6px solid #000;
   padding: 16px 20px;
@@ -145,19 +163,16 @@ aside p {
   margin-top: 24px;
   box-shadow: 2px 2px 0px #000;
 }
-
 .music-player .music-box h2 {
   font-family: "Playfair Display", serif;
   font-size: 28px;
   margin-bottom: 8px;
   text-transform: uppercase;
 }
-
 .music-player .music-box p {
   font-size: 12px;
   margin: 6px 0 12px;
 }
-
 .music-player .music-box audio {
   width: 100%;
   margin-bottom: 12px;
@@ -166,37 +181,31 @@ aside p {
   padding: 4px;
   border-radius: 2px;
 }
-
 .music-player .music-box ul {
   font-size: 12px;
   padding-left: 20px;
   margin: 0;
 }
-
 .music-player .music-box ul li {
   margin-bottom: 6px;
   cursor: pointer;
   transition: color 0.2s, font-weight 0.2s;
 }
-
 .music-player .music-box ul li:hover {
   color: #d6336c;
   font-weight: 700;
 }
-
 .music-player .music-box ul li:first-child {
   font-weight: 700;
   color: #000;
   position: relative;
   padding-left: 18px;
 }
-
 .music-player .music-box ul li:first-child::before {
   content: "🎵";
   position: absolute;
   left: 0;
 }
-
 .footer {
   margin-top: 20px;
   border-top: 6px solid #000;
@@ -204,7 +213,6 @@ aside p {
   font-size: 12px;
   text-align: center;
 }
-
 @media (max-width: 880px) {
   .lead {
     grid-template-columns: 1fr;
@@ -219,7 +227,6 @@ aside p {
     font-size: 40px;
   }
 }
-
 @media (max-width: 480px) {
   .cards {
     grid-template-columns: 1fr;
@@ -234,24 +241,20 @@ aside p {
   height: auto !important;
   overflow: visible !important;
 }
-
 .card img {
   width: 100% !important;
   height: auto !important;
   object-fit: contain !important;
   display: block;
 }
-
 .cards {
   align-items: stretch;
 }
-
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .foto-frase {
   display: flex;
   align-items: center;
@@ -261,14 +264,12 @@ aside p {
   padding: 12px;
   background: #fff;
 }
-
 .foto-frase img {
   width: 50%;
   height: auto;
   display: block;
   border: 4px solid #000;
 }
-
 .foto-frase .texto {
   width: 50%;
   font-family: "Playfair Display", serif;
@@ -276,120 +277,16 @@ aside p {
   font-weight: 700;
   text-transform: uppercase;
 }
-
 @media (max-width: 768px) {
   .foto-frase {
     flex-direction: column;
   }
-
   .foto-frase img,
   .foto-frase .texto {
     width: 100%;
   }
-
   .foto-frase .texto {
     font-size: 28px;
     text-align: center;
   }
-}
-.masthead {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  border-bottom: 8px solid #000;
-  padding: 8px 0;
-  position: relative;
-}
-
-.masthead-img {
-  height: 60px;
-  width: auto;
-}
-
-.masthead .title {
-  font-family: "Playfair Display", serif;
-  font-weight: 900;
-  letter-spacing: 2px;
-  font-size: 56px;
-  text-align: center;
-}
-
-.masthead-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-
-.masthead-container img {
-  height: 64px;
-  width: auto;
-}
-
-.masthead-container .title {
-  margin: 0;
-  white-space: nowrap;
-  font-size: 56px;
-}
-
-.masthead-info {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 4px;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.masthead-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
-.masthead-info {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 4px;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.masthead-img {
-  height: 40px;
-  width: auto;
-}
-.masthead-title-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: nowrap;
-}
-
-.masthead-img {
-  height: 50px;
-  width: auto;
-}
-
-.masthead .title {
-  font-family: "Playfair Display", serif;
-  font-weight: 900;
-  letter-spacing: 2px;
-  font-size: 56px;
-  text-align: center;
-}
-
-.masthead-info {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 8px;
-  font-size: 12px;
-  text-transform: uppercase;
-  flex-wrap: wrap;
 }
