@@ -94,9 +94,15 @@ aside p {
   text-transform: uppercase;
 }
 
+/* ========================
+   REJILLA Y CARDS ACTUALIZADAS
+======================== */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* permite más noticias y mantiene diseño */
   gap: 12px;
 }
 
@@ -107,7 +113,7 @@ aside p {
 }
 
 .card .thumb {
-  height: auto;
+  height: 120px; /* mantiene tu diseño original */
   overflow: hidden;
   border-bottom: 4px solid #000;
   margin-bottom: 8px;
@@ -115,8 +121,8 @@ aside p {
 
 .card img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%; /* mantiene la proporción dentro de la caja */
+  object-fit: cover; /* mantiene el recorte uniforme original */
   filter: grayscale(1);
 }
 
