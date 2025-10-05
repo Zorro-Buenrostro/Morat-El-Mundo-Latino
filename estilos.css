@@ -230,3 +230,14 @@ aside p {
     gap: 8px;
   }
 }
+.card .thumb {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.card img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block;
+}
