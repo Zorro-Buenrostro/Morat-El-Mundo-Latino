@@ -193,58 +193,44 @@
 
         <!-- NUEVA SECCIÓN DE MÚSICA FUNCIONAL -->
         <section class="music-player">
-          <div class="music-box">
-            <h2>Escucha el álbum</h2>
-            <p>
-              Disfruta los sencillos de YEM directamente desde nuestro
-              periódico:
-            </p>
-            <div class="music-box">
-              <h2>Escucha el álbum</h2>
-              <p>
-                Disfruta los sencillos de YEM directamente desde nuestro
-                periódico:
-              </p>
+  <div class="music-box">
+    <h2>Escucha el álbum</h2>
+    <p>Disfruta los sencillos de YEM directamente desde nuestro periódico:</p>
 
-              <audio controls>
-                <source src="musica/ya-es-manana.mp3" type="audio/mpeg" />
-                Tu navegador no soporta audio HTML5.
-              </audio>
+    <audio controls id="player">
+      <source src="musica/Ya Es Mañana.mp3" type="audio/mpeg" />
+      Tu navegador no soporta audio HTML5.
+    </audio>
 
-              <ul>
-                <li data-src="musica/ya-es-manana.mp3">YA ES MAÑANA — 04:58</li>
-                <li data-src="musica/eclipse-solar.mp3">
-                  ECLIPSE SOLAR — 03:13
-                </li>
-                <li data-src="musica/domingo-de-bajon.mp3">
-                  DOMINGO DE BAJÓN — 02:56
-                </li>
-                <li data-src="musica/sin-ti.mp3">
-                  SIN TI FT JAY WHEELER — 02:39
-                </li>
-                <li data-src="musica/por-si-no-te-vuelvo-a-ver.mp3">
-                  POR SI NO TE VUELVO A VER — 03:05
-                </li>
-                <li data-src="musica/cuarto-de-hotel.mp3">
-                  CUARTO DE HOTEL — 02:57
-                </li>
-              </ul>
-            </div>
+    <ul id="playlist">
+      <li data-src="musica/Ya Es Mañana.mp3">YA ES MAÑANA — 04:58</li>
+      <li data-src="musica/Eclipse Solar.mp3">ECLIPSE SOLAR — 03:13</li>
+      <li data-src="musica/Domingo De Bajón.mp3">DOMINGO DE BAJÓN — 02:56</li>
+      <li data-src="musica/Sin Ti.mp3">SIN TI FT JAY WHEELER — 02:39</li>
+      <li data-src="musica/Por Si No Te Vuelvo A Ver.mp3">POR SI NO TE VUELVO A VER — 03:05</li>
+      <li data-src="musica/Cuarto De Hotel.mp3">CUARTO DE HOTEL — 02:57</li>
+    </ul>
+  </div>
+</section>
 
-            <script>
-              const player = document.querySelector(".music-player audio");
-              const trackList = document.querySelectorAll(
-                ".music-player ul li"
-              );
+<script>
+  const player = document.getElementById("player");
+  const playlist = document.getElementById("playlist");
+  const songs = playlist.querySelectorAll("li");
 
-              trackList.forEach((track) => {
-                track.addEventListener("click", () => {
-                  const src = track.getAttribute("data-src");
-                  player.src = src;
-                  player.play();
-                });
-              });
-            </script>
+  songs.forEach(song => {
+    song.addEventListener("click", () => {
+      player.src = song.dataset.src;
+      player.play();
+
+      
+      songs.forEach(s => s.style.fontWeight = "400");
+      song.style.fontWeight = "700";
+    });
+  });
+</script>
+
+          
           </div>
         </section>
       </main>
